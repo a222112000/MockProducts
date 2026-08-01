@@ -61,4 +61,6 @@ dependencies {
     testImplementation(libs.turbine)
     implementation(libs.android.coroutine.test)
     implementation(libs.android.icons)
+    implementation(libs.coil.compose)
+    implementation(libs.coil.okhttp)
 }

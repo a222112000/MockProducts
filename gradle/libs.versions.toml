@@ -15,6 +15,7 @@ androidHilt = "1.4.0"
 androidxCoroutineTest = "1.11.0"
 mockk = "1.14.11"
 turbine = "1.2.1"
+coil = "3.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,7 +41,8 @@ android-coroutine-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coro
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk"}
 turbine = { group = "app.cash.turbine", name ="turbine", version.ref = "turbine"}
 android-icons = { group = "androidx.compose.material", name = "material-icons-extended"}
-
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
+coil-okhttp = {module = "io.coil-kt.coil3:coil-network-okhttp", version.ref ="coil"}
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

@@ -15,7 +15,7 @@ data class Hit(
     val labels: List<String>,
     val media: List<Media>,
     val objectID: String,
-    val price: Int,
+    val price: Double,
     val sizeInStock: List<String>,
     val sku: String,
     val title: String,

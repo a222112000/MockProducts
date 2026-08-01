@@ -15,7 +15,7 @@ data class DomainHit(
     val labels: List<String>,
     val media: List<DomainMedia>,
     val objectID: String,
-    val price: Int,
+    val price: Double,
     val sizeInStock: List<String>,
     val sku: String,
     val title: String,

@@ -9,6 +9,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.NavController
 import com.alselwi.productsapp.presentation.contract.ProductUiEffect
 import com.alselwi.productsapp.presentation.contract.ProductUiEvent
+import com.alselwi.productsapp.presentation.navigation.Screen
 import com.alselwi.productsapp.presentation.viewmodel.ProductViewModel
 import kotlinx.coroutines.flow.collectLatest
 
@@ -36,5 +37,7 @@ fun ProductScreen(
     }
     ProductContents(loading = state.loading, hit = state.products, refreshClick = {
         viewModel.onEvent(ProductUiEvent.Refresh)
+    }, onSelectedProduct = {productId ->
+        navController.navigate(Screen.ProductDetails.routeProduct(productIt = productId))
     })
 }

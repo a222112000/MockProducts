@@ -1,5 +1,6 @@
 package com.alselwi.productsapp.presentation.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.viewModelScope
 import com.alselwi.productsapp.core.BaseViewModel
 import com.alselwi.productsapp.core.NetworkResult

@@ -47,7 +47,7 @@ class ProductMapper @Inject constructor() {
                         gender = hit.gender.orEmpty(),
                         handle = hit.handle.orEmpty(),
                         id = hit.id,
-                        inStock = hit.inStock,
+                        inStock = hit.inStock ?: false,
                         labels = hit.labels.orEmpty(),
                         media = hit.media.map { media ->
                             DomainMedia(
@@ -65,10 +65,10 @@ class ProductMapper @Inject constructor() {
                             )
                         },
                         objectID = hit.objectID.orEmpty(),
-                        price = hit.price,
+                        price = hit.price ?: 0.00,
                         sizeInStock = hit.sizeInStock.orEmpty(),
                         sku = hit.sku.orEmpty(),
-                        title = hit.title.orEmpty(),
+                        title = hit.title.orEmpty().ifBlank { "Unknown product" },
                         type = hit.type.orEmpty()
                     )
                 }

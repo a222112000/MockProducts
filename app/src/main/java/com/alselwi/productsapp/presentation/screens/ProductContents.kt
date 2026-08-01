@@ -24,7 +24,8 @@ import com.alselwi.productsapp.domain.entity.DomainHit
 fun ProductContents(
     loading: Boolean,
     hit: List<DomainHit>,
-    refreshClick:()-> Unit
+    refreshClick:()-> Unit,
+    onSelectedProduct:(Long)->Unit
 ){
     Scaffold(topBar = { TopAppBar(title = { Text("Products",
         style = MaterialTheme.typography.headlineLarge) },
@@ -53,7 +54,9 @@ fun ProductContents(
                     items(items = hit, key = {product->
                         product.id
                     }){ hit->
-                        ProductCard(hit = hit)
+                        ProductCard(hit = hit, onClick = { item->
+                            onSelectedProduct(item)
+                        })
                     }
                 }
             }
